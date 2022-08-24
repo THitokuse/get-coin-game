@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinController : MonoBehaviour
 {
+    public GameObject goalUi;
     private float speed = 300.0f;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class CoinController : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Destroy(gameObject, 0.3f);
+            goalUi.SetActive(true);
         }
     }
 }
